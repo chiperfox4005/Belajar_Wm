@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version Control System - Git & GitHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-content">
+
+            <div class="logo">
+                <div class="logo-icon">G</div>
+                <div>
+                    <strong>VCS Learning</strong>
+                    <span>Software Development</span>
+                </div>
+            </div>
+
+            <nav>
+                <a href="#beranda">Beranda</a>
+                <a href="#vcs">VCS</a>
+                <a href="#git">Git</a>
+                <a href="#github">GitHub</a>
+                <a href="#praktik">Praktik</a>
+                <a href="#command">Command</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="beranda">
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <span class="badge">WEEKLY MEET 2</span>
+
+                <h1>
+                    Pelatihan
+                    <span>Version Control System</span>
+                    dengan Git & GitHub
+                </h1>
+
+                <p>
+                    Pelajari bagaimana Version Control System membantu
+                    menyimpan riwayat perubahan, mengelola source code,
+                    dan memudahkan kolaborasi dalam pengembangan perangkat lunak.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#vcs" class="btn primary">
+                        Mulai Belajar
+                    </a>
+
+                    <a href="#praktik" class="btn secondary">
+                        Lihat Praktik
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="terminal-header">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="terminal">
+                    <p><span class="green">$</span> git init</p>
+                    <p><span class="green">$</span> git add .</p>
+                    <p><span class="green">$</span> git commit -m "Initial commit"</p>
+                    <p><span class="green">$</span> git push -u origin main</p>
+
+                    <div class="success">
+                        ✓ Project berhasil disimpan
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROBLEM -->
+    <section class="section" id="masalah">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">PROBLEM STATEMENT</span>
+
+                <h2>
+                    Kenapa kita membutuhkan
+                    <span>Version Control?</span>
+                </h2>
+
+                <p>
+                    Dalam kerja kelompok coding, pengelolaan file secara manual
+                    dapat menimbulkan berbagai masalah.
+                </p>
+
+            </div>
+
+
+            <div class="problem-grid">
+
+                <div class="problem-card">
+
+                    <div class="problem-icon">01</div>
+
+                    <h3>File Bertumpuk</h3>
+
+                    <div class="file-list">
+                        <code>website-final.zip</code>
+                        <code>website-final-fix.zip</code>
+                        <code>website-final-fix2.zip</code>
+                        <code>website-final-baru.zip</code>
+                    </div>
+
+                    <p>
+                        Sulit mengetahui file mana yang merupakan versi terbaru.
+                    </p>
+
+                </div>
+
+
+                <div class="problem-card">
+
+                    <div class="problem-icon">02</div>
+
+                    <h3>Perubahan Tidak Terlacak</h3>
+
+                    <ul class="check-list danger">
+                        <li>File tertimpa</li>
+                        <li>Edit bersamaan</li>
+                        <li>Tidak tahu siapa mengubah apa</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="problem-card">
+
+                    <div class="problem-icon">03</div>
+
+                    <h3>Kolaborasi Sulit</h3>
+
+                    <p>
+                        Penggunaan folder biasa atau pengiriman file membuat
+                        proses kerja kelompok menjadi kurang terorganisir.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="problem-summary">
+
+                <h3>Tanpa Version Control</h3>
+
+                <div class="negative-items">
+                    <span>✕ Tidak ada histori</span>
+                    <span>✕ Tidak tahu perubahan</span>
+                    <span>✕ Sulit kolaborasi</span>
+                    <span>✕ Takut kehilangan file</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VCS -->
+    <section class="section light" id="vcs">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">SOLUTION</span>
+
+                <h2>
+                    Apa itu
+                    <span>Version Control System?</span>
+                </h2>
+
+                <p>
+                    VCS adalah sistem yang digunakan untuk mencatat setiap
+                    perubahan pada proyek atau source code dari waktu ke waktu.
+                </p>
+
+            </div>
+
+
+            <div class="vcs-layout">
+
+                <div class="vcs-description">
+
+                    <div class="big-icon">
+                        VCS
+                    </div>
+
+                    <p>
+                        Dengan Version Control System, pengembang dapat
+                        mengetahui perubahan yang terjadi pada sebuah project
+                        dan mengelola berbagai versi project dengan lebih teratur.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-grid">
+
+                    <div class="benefit-card">
+                        <span>01</span>
+                        <h3>Melihat Perubahan</h3>
+                        <p>
+                            Mengetahui siapa yang melakukan perubahan.
+                        </p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span>02</span>
+                        <h3>Riwayat Project</h3>
+                        <p>
+                            Mengetahui kapan perubahan dilakukan.
+                        </p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span>03</span>
+                        <h3>Membandingkan Versi</h3>
+                        <p>
+                            Membandingkan perubahan antar versi project.
+                        </p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <span>04</span>
+                        <h3>Restore</h3>
+                        <p>
+                            Mengembalikan project ke versi sebelumnya.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPARISON -->
+
+            <div class="comparison">
+
+                <div class="comparison-box old">
+
+                    <h3>Tanpa Version Control</h3>
+
+                    <ul>
+                        <li>File bertumpuk</li>
+                        <li>Sulit kerja kelompok</li>
+                        <li>Tidak tahu siapa yang mengubah</li>
+                        <li>Sulit kembali ke versi lama</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="comparison-vs">
+                    VS
+                </div>
+
+
+                <div class="comparison-box new">
+
+                    <h3>Dengan Version Control</h3>
+
+                    <ul>
+                        <li>Semua perubahan tercatat</li>
+                        <li>Bisa melihat riwayat project</li>
+                        <li>Bisa kembali ke versi sebelumnya</li>
+                        <li>Banyak orang dapat bekerja bersama</li>
+                        <li>Project lebih aman dan terorganisir</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GIT -->
+    <section class="section" id="git">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">GIT INTRODUCTION</span>
+
+                <h2>
+                    Mengenal
+                    <span>Git</span>
+                </h2>
+
+                <p>
+                    Git merupakan software Version Control System yang digunakan
+                    untuk mencatat perubahan source code dan membantu kolaborasi.
+                </p>
+
+            </div>
+
+
+            <div class="git-feature">
+
+                <div class="git-info">
+
+                    <div class="git-logo">
+                        git
+                    </div>
+
+                    <h3>Git Version Control</h3>
+
+                    <p>
+                        Git bekerja pada komputer atau laptop dan dapat digunakan
+                        untuk mengelola versi project bahkan ketika sedang offline.
+                    </p>
+
+                </div>
+
+
+                <div class="git-functions">
+
+                    <div>
+                        <strong>01</strong>
+                        <span>Menyimpan riwayat perubahan</span>
+                    </div>
+
+                    <div>
+                        <strong>02</strong>
+                        <span>Mengetahui siapa yang mengubah kode</span>
+                    </div>
+
+                    <div>
+                        <strong>03</strong>
+                        <span>Membandingkan perubahan</span>
+                    </div>
+
+                    <div>
+                        <strong>04</strong>
+                        <span>Mengembalikan project</span>
+                    </div>
+
+                    <div>
+                        <strong>05</strong>
+                        <span>Kolaborasi dalam tim</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMMIT -->
+
+            <div class="commit-section">
+
+                <h3>Setiap Commit adalah Snapshot</h3>
+
+                <p>
+                    Commit menyimpan kondisi project pada suatu waktu tertentu.
+                </p>
+
+
+                <div class="commit-flow">
+
+                    <div class="commit-node">
+                        <span>01</span>
+                        <strong>Project</strong>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="commit-node">
+                        <span>02</span>
+                        <strong>Commit 1</strong>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="commit-node">
+                        <span>03</span>
+                        <strong>Commit 2</strong>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="commit-node">
+                        <span>04</span>
+                        <strong>Commit 3</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GITHUB -->
+    <section class="section light" id="github">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">GITHUB INTRODUCTION</span>
+
+                <h2>
+                    Mengenal
+                    <span>GitHub</span>
+                </h2>
+
+                <p>
+                    GitHub merupakan platform berbasis cloud untuk menyimpan
+                    repository Git secara online.
+                </p>
+
+            </div>
+
+
+            <div class="github-grid">
+
+                <div class="github-card">
+
+                    <div class="github-symbol">
+                        G
+                    </div>
+
+                    <h3>Git</h3>
+
+                    <p>
+                        Mesin pencatat perubahan project.
+                    </p>
+
+                    <ul>
+                        <li>Bekerja di laptop</li>
+                        <li>Bisa offline</li>
+                        <li>Mengelola versi</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="versus">
+                    VS
+                </div>
+
+
+                <div class="github-card">
+
+                    <div class="github-symbol github">
+                        GH
+                    </div>
+
+                    <h3>GitHub</h3>
+
+                    <p>
+                        Tempat menyimpan repository secara online.
+                    </p>
+
+                    <ul>
+                        <li>Bekerja melalui internet</li>
+                        <li>Berbagi repository</li>
+                        <li>Kolaborasi tim</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="github-features">
+
+                <h3>Apa yang bisa dilakukan GitHub?</h3>
+
+                <div class="feature-list">
+
+                    <div>Repository</div>
+                    <div>Kolaborasi</div>
+                    <div>Commit History</div>
+                    <div>Branch</div>
+                    <div>Code Review</div>
+                    <div>Issues</div>
+                    <div>README</div>
+                    <div>Portfolio</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRACTICE -->
+    <section class="section" id="praktik">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">HANDS-ON PRACTICE</span>
+
+                <h2>
+                    Praktik Dasar
+                    <span>Git</span>
+                </h2>
+
+                <p>
+                    Ikuti langkah berikut untuk membuat project sederhana
+                    dan mulai menggunakan Git.
+                </p>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="step-number">01</div>
+
+                    <div class="step-content">
+
+                        <h3>Buat Folder Project</h3>
+
+                        <p>
+                            Buat folder project dengan nama sesuai kebutuhan.
+                        </p>
+
+                        <div class="code-box">
+                            <span>project-git</span>
+                            <span>├── index.html</span>
+                            <span>└── style.css</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">02</div>
+
+                    <div class="step-content">
+
+                        <h3>Inisialisasi Git</h3>
+
+                        <p>
+                            Buka Git Bash pada folder project kemudian jalankan:
+                        </p>
+
+                        <div class="command">
+                            git init
+                        </div>
+
+                        <small>
+                            Perintah ini membuat repository Git pada project.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">03</div>
+
+                    <div class="step-content">
+
+                        <h3>Cek Status</h3>
+
+                        <p>
+                            Gunakan git status untuk melihat kondisi project.
+                        </p>
+
+                        <div class="command">
+                            git status
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">04</div>
+
+                    <div class="step-content">
+
+                        <h3>Masukkan File ke Staging</h3>
+
+                        <p>
+                            Masukkan perubahan ke staging area.
+                        </p>
+
+                        <div class="command">
+                            git add .
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">05</div>
+
+                    <div class="step-content">
+
+                        <h3>Buat Commit</h3>
+
+                        <p>
+                            Simpan snapshot project ke dalam histori Git.
+                        </p>
+
+                        <div class="command">
+                            git commit -m "Initial commit"
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">06</div>
+
+                    <div class="step-content">
+
+                        <h3>Lihat History</h3>
+
+                        <p>
+                            Lihat seluruh commit yang sudah dibuat.
+                        </p>
+
+                        <div class="command">
+                            git log
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">07</div>
+
+                    <div class="step-content">
+
+                        <h3>Restore File</h3>
+
+                        <p>
+                            Mengembalikan file ke kondisi pada commit tertentu.
+                        </p>
+
+                        <div class="command">
+                            git restore --source=&lt;commit-id&gt; index.html
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WORKFLOW -->
+    <section class="section workflow-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">GIT WORKFLOW</span>
+
+                <h2>
+                    Siklus Kerja
+                    <span>Git</span>
+                </h2>
+
+            </div>
+
+
+            <div class="workflow">
+
+                <div class="workflow-item">
+                    <div class="circle">1</div>
+                    <h3>Untracked</h3>
+                    <p>File belum dikenali Git.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="workflow-item">
+                    <div class="circle">2</div>
+                    <h3>Modified</h3>
+                    <p>File mengalami perubahan.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="workflow-item">
+                    <div class="circle">3</div>
+                    <h3>Staged</h3>
+                    <p>Perubahan siap disimpan.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="workflow-item">
+                    <div class="circle">4</div>
+                    <h3>Committed</h3>
+                    <p>Perubahan menjadi histori.</p>
+                </div>
+
+            </div>
+
+
+            <div class="area-flow">
+
+                <div>
+                    <span>Working Directory</span>
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    <span>Staging Area</span>
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    <span>Repository</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GITHUB WORKFLOW -->
+    <section class="section" id="command">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">GIT + GITHUB</span>
+
+                <h2>
+                    Workflow
+                    <span>GitHub</span>
+                </h2>
+
+                <p>
+                    Setelah project tersimpan di repository lokal,
+                    project dapat dihubungkan dengan repository GitHub.
+                </p>
+
+            </div>
+
+
+            <div class="github-workflow">
+
+                <div class="workflow-box">
+                    <strong>Working Directory</strong>
+                    <span>File yang sedang dikerjakan</span>
+                </div>
+
+                <div class="big-arrow">↓</div>
+
+                <div class="workflow-box">
+                    <strong>Staging Area</strong>
+                    <span>Perubahan yang dipilih</span>
+                </div>
+
+                <div class="big-arrow">↓</div>
+
+                <div class="workflow-box">
+                    <strong>Local Repository</strong>
+                    <span>Riwayat Git di komputer</span>
+                </div>
+
+                <div class="big-arrow">
+                    ↓
+                    <small>git push</small>
+                </div>
+
+                <div class="workflow-box github-box">
+                    <strong>Remote Repository</strong>
+                    <span>Repository GitHub</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMMAND TABLE -->
+    <section class="section light">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">COMMAND REFERENCE</span>
+
+                <h2>
+                    Ringkasan
+                    <span>Command Git & GitHub</span>
+                </h2>
+
+            </div>
+
+
+            <div class="command-table">
+
+                <div class="table-header">
+                    <span>Command</span>
+                    <span>Fungsi</span>
+                </div>
+
+
+                <div class="table-row">
+                    <code>git init</code>
+                    <span>Membuat repository Git</span>
+                </div>
+
+                <div class="table-row">
+                    <code>git status</code>
+                    <span>Melihat kondisi project</span>
+                </div>
+
+                <div class="table-row">
+                    <code>git add .</code>
+                    <span>Memasukkan perubahan ke staging</span>
+                </div>
+
+                <div class="table-row">
+                    <code>git commit</code>
+                    <span>Menyimpan snapshot project</span>
+                </div>
+
+                <div class="table-row">
+                    <code>git log</code>
+                    <span>Melihat histori commit</span>
+                </div>
+
+                <div class="table-row">
+                    <code>git restore</code>
+                    <span>Mengembalikan file ke versi tertentu</span>
+                </div>
+
+                <div class="table-row">
+                    <code>git remote add origin</code>
+                    <span>Menghubungkan repository lokal dengan GitHub</span>
+                </div>
+
+                <div class="table-row">
+                    <code>git remote -v</code>
+                    <span>Melihat remote yang terhubung</span>
+                </div>
+
+                <div class="table-row">
+                    <code>git branch -M main</code>
+                    <span>Mengubah nama branch menjadi main</span>
+                </div>
+
+                <div class="table-row">
+                    <code>git push -u origin main</code>
+                    <span>Mengirim commit ke GitHub</span>
+                </div>
+
+                <div class="table-row">
+                    <code>git clone</code>
+                    <span>Mengambil repository dari GitHub</span>
+                </div>
+
+                <div class="table-row">
+                    <code>git pull</code>
+                    <span>Mengambil perubahan terbaru dari GitHub</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+    <section class="final-section">
+
+        <div class="container">
+
+            <div class="final-content">
+
+                <span class="section-label">KEY TAKEAWAY</span>
+
+                <h2>
+                    Git mengelola versi.
+                    <br>
+                    GitHub menyimpan repository secara online.
+                </h2>
+
+                <p>
+                    Dengan Git dan GitHub, project dapat dikelola dengan
+                    riwayat perubahan yang jelas dan mendukung kolaborasi tim.
+                </p>
+
+                <a href="#beranda" class="btn primary">
+                    Kembali ke Atas
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+                <strong>VCS Learning</strong>
+                <p>Pelatihan Version Control System dengan Git & GitHub</p>
+            </div>
+
+            <div>
+                Weekly Meet 2 · Software Development
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
